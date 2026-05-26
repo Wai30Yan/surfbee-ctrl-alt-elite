@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 120, "left": -20, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 160, "left": -220, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": 20, "left": 180, "attrs": { "common": "cathode" } },
+    { "type": "wokwi-resistor", "id": "resR", "top": -10, "left": 110, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "resG", "top": 30, "left": 110, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "resB", "top": 70, "left": 110, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "uno:GND.1", "pot1:GND", "black", [ "v0" ] ],
+    [ "uno:5V", "pot1:VCC", "red", [ "v0" ] ],
+    [ "uno:A0", "pot1:SIG", "green", [ "v0" ] ],
+    
+    [ "uno:4", "resR:1", "red", [ "v0" ] ],
+    [ "resR:2", "rgb1:R", "red", [ "v0" ] ],
+    
+    [ "uno:3", "resG:1", "green", [ "v0" ] ],
+    [ "resG:2", "rgb1:G", "green", [ "v0" ] ],
+    
+    [ "uno:2", "resB:1", "blue", [ "v0" ] ],
+    [ "resB:2", "rgb1:B", "blue", [ "v0" ] ],
+    
+    [ "uno:GND.2", "rgb1:COM", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
