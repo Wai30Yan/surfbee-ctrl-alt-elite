@@ -53,13 +53,13 @@ void loop() {
   // ----------------------------------------------------
   // 1. pH LED LOGIC (Red <= 6.0, Yellow = 6.5 & 8.5, Green = 7.0-8.0, Blue >= 9.0)
   // ----------------------------------------------------
-  if (currentPH <= 6.2) {
+  if (currentPH < 6.5) {
     updateRGB(PH_RED, PH_GREEN, PH_BLUE, 255, 0, 0);    
-  } else if (currentPH > 6.2 && currentPH < 6.8) {
+  } else if (currentPH >= 6.5 && currentPH <= 6.9) {
     updateRGB(PH_RED, PH_GREEN, PH_BLUE, 255, 200, 0);  
-  } else if (currentPH >= 6.8 && currentPH <= 8.2) {
+  } else if (currentPH >= 7 && currentPH <= 8.0) {
     updateRGB(PH_RED, PH_GREEN, PH_BLUE, 0, 255, 0);     
-  } else if (currentPH > 8.2 && currentPH < 8.8) {
+  } else if (currentPH > 8.1 && currentPH < 8.5) {
     updateRGB(PH_RED, PH_GREEN, PH_BLUE, 255, 200, 0);  
   } else {
     updateRGB(PH_RED, PH_GREEN, PH_BLUE, 0, 0, 255);    
