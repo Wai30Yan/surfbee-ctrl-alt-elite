@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "author": "Minn Thiha Chit",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 96.6, "left": 85.8, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -106.9,
+      "left": -249.8,
+      "attrs": { "label": "pH" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -92.8,
+      "left": 154.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": -103,
+      "left": 441,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_tds",
+      "top": -106.9,
+      "left": -29,
+      "attrs": { "label": "TDS" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_turb",
+      "top": -106.9,
+      "left": 230.0,
+      "attrs": { "label": "Turbidity Dial" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_temp",
+      "top": -106.9,
+      "left": 510.0,
+      "attrs": { "label": "Temp Dial" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "led_pH",
+      "top": -92,
+      "left": -162.1,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "led_turb",
+      "top": -92,
+      "left": 337.1,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "led_temp",
+      "top": -92,
+      "left": 586.7,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "led_tds",
+      "top": -92,
+      "left": 58.7,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "pot1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ],
+    [ "ldr1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "ldr1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "ldr1:AO", "uno:A1", "yellow", [ "v0" ] ],
+    [ "ntc1:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "ntc1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "ntc1:OUT", "uno:A2", "green", [ "v0" ] ],
+    [ "pot_tds:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot_tds:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot_tds:SIG", "uno:A3", "blue", [ "v0" ] ],
+    
+    [ "pot_turb:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot_turb:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot_turb:SIG", "uno:A4", "orange", [ "v0" ] ],
+
+    [ "pot_temp:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot_temp:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot_temp:SIG", "uno:A5", "purple", [ "v0" ] ],
+
+    [ "led_pH:COM", "uno:GND.3", "black", [ "v0" ] ],
+    [ "led_pH:R", "uno:2", "red", [ "v0" ] ],
+    [ "led_pH:G", "uno:3", "green", [ "v0" ] ],
+    [ "led_turb:COM", "uno:GND.3", "black", [ "v0" ] ],
+    [ "led_turb:R", "uno:4", "red", [ "v0" ] ],
+    [ "led_turb:G", "uno:5", "green", [ "v0" ] ],
+    [ "led_temp:COM", "uno:GND.3", "black", [ "v0" ] ],
+    [ "led_temp:R", "uno:6", "red", [ "v0" ] ],
+    [ "led_temp:G", "uno:7", "green", [ "v0" ] ],
+    [ "led_tds:COM", "uno:GND.3", "black", [ "v0" ] ],
+    [ "led_tds:R", "uno:8", "red", [ "v0" ] ],
+    [ "led_tds:G", "uno:9", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
