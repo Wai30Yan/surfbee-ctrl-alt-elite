@@ -35,15 +35,15 @@
     {
       "type": "wokwi-potentiometer",
       "id": "pot_turb",
-      "top": -106.9,
-      "left": 230.0,
+      "top": -10.9,
+      "left": 201.4,
       "attrs": { "label": "Turbidity Dial" }
     },
     {
       "type": "wokwi-potentiometer",
       "id": "pot_temp",
-      "top": -106.9,
-      "left": 510.0,
+      "top": -10.9,
+      "left": 451,
       "attrs": { "label": "Temp Dial" }
     },
     {
@@ -88,15 +88,12 @@
     [ "pot_tds:GND", "uno:GND.2", "black", [ "v0" ] ],
     [ "pot_tds:VCC", "uno:5V", "red", [ "v0" ] ],
     [ "pot_tds:SIG", "uno:A3", "blue", [ "v0" ] ],
-    
     [ "pot_turb:GND", "uno:GND.2", "black", [ "v0" ] ],
     [ "pot_turb:VCC", "uno:5V", "red", [ "v0" ] ],
     [ "pot_turb:SIG", "uno:A4", "orange", [ "v0" ] ],
-
     [ "pot_temp:GND", "uno:GND.2", "black", [ "v0" ] ],
     [ "pot_temp:VCC", "uno:5V", "red", [ "v0" ] ],
     [ "pot_temp:SIG", "uno:A5", "purple", [ "v0" ] ],
-
     [ "led_pH:COM", "uno:GND.3", "black", [ "v0" ] ],
     [ "led_pH:R", "uno:2", "red", [ "v0" ] ],
     [ "led_pH:G", "uno:3", "green", [ "v0" ] ],
