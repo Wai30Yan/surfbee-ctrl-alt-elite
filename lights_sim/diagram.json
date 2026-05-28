@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 144, "left": 50.4, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb_ph", "top": -45, "left": -50.0, "attrs": { "common": "cathode", "label": "pH" } },
+    { "type": "wokwi-rgb-led", "id": "rgb_tds", "top": -45, "left": 60.0, "attrs": { "common": "cathode", "label": "TDS" } },
+    { "type": "wokwi-rgb-led", "id": "rgb_turb", "top": -45, "left": 170.0, "attrs": { "common": "cathode", "label": "Turbidity" } },
+    { "type": "wokwi-rgb-led", "id": "rgb_temp", "top": -45, "left": 280.0, "attrs": { "common": "cathode", "label": "Temperature" } }
+  ],
+  "connections": [
+    [ "uno:GND.1", "rgb_ph:COM", "black", [ "v0" ] ],
+    [ "uno:GND.2", "rgb_tds:COM", "black", [ "v0" ] ],
+    [ "uno:GND.3", "rgb_turb:COM", "black", [ "v0" ] ],
+    [ "uno:GND.3", "rgb_temp:COM", "black", [ "v0" ] ],
+    
+    [ "uno:2", "rgb_ph:R", "red", [ "v0" ] ],
+    [ "uno:3", "rgb_ph:G", "green", [ "v0" ] ],
+    [ "uno:4", "rgb_ph:B", "blue", [ "v0" ] ],
+
+    [ "uno:5", "rgb_tds:R", "red", [ "v0" ] ],
+    [ "uno:6", "rgb_tds:G", "green", [ "v0" ] ],
+    [ "uno:7", "rgb_tds:B", "blue", [ "v0" ] ],
+
+    [ "uno:8", "rgb_turb:R", "red", [ "v0" ] ],
+    [ "uno:9", "rgb_turb:G", "green", [ "v0" ] ],
+    [ "uno:10", "rgb_turb:B", "blue", [ "v0" ] ],
+
+    [ "uno:11", "rgb_temp:R", "red", [ "v0" ] ],
+    [ "uno:12", "rgb_temp:G", "green", [ "v0" ] ],
+    [ "uno:13", "rgb_temp:B", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

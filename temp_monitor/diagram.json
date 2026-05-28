@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 96, "left": 50.4, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -45, "left": 230.4, "attrs": { "common": "cathode" } },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 343.8, "left": -10.6, "attrs": { "label": "Temperature Simulation Dial" } }
+  ],
+  "connections": [
+    [ "uno:GND.1", "pot1:GND", "black", [ "v0" ] ],
+    [ "uno:5V", "pot1:VCC", "red", [ "v0" ] ],
+    [ "uno:A0", "pot1:SIG", "blue", [ "v0" ] ],
+
+    [ "uno:GND.2", "rgb1:COM", "black", [ "v0" ] ],
+    [ "uno:9", "rgb1:R", "red", [ "v0" ] ],
+    [ "uno:10", "rgb1:G", "green", [ "v0" ] ],
+    [ "uno:11", "rgb1:B", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

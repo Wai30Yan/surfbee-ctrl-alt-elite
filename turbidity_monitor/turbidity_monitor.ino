@@ -39,7 +39,7 @@ void loop() {
   // 2. Medium Turbidity: Yellow (Red + Green mixed)
   else if (turbidity > 33.0 && turbidity <= 66.0) {
     analogWrite(RED_PIN, 255);
-    analogWrite(GREEN_PIN, 200); // Shifting slightly below 255 gives a richer yellow
+    analogWrite(GREEN_PIN, 200);
     analogWrite(BLUE_PIN, 0);
     Serial.println("MEDIUM [YELLOW]");
   } 
@@ -51,5 +51,5 @@ void loop() {
     Serial.println("HIGH [RED]");
   }
 
-  delay(200); // Short delay to prevent serial flooding
+  delay(200); 
 }

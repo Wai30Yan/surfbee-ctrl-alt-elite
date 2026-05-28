@@ -26,22 +26,22 @@ void loop() {
   // --- COLOR & CLASSIFICATION LOGIC ---
   
   if (pH < 6.5) {
-    // Red for acidic
     analogWrite(RED_PIN, 255); analogWrite(GREEN_PIN, 0); analogWrite(BLUE_PIN, 0); 
     Serial.println("Acidic");
   } 
-  else if (pH >= 6.5 && pH <= 8.2) {
-    // Green for safe drinking water (Matches your 7.5 current target)
-    analogWrite(RED_PIN, 0); analogWrite(GREEN_PIN, 255); analogWrite(BLUE_PIN, 0); 
+  else if (pH >= 6.5 && pH <= 6.9) {
+    analogWrite(RED_PIN, 255); analogWrite(GREEN_PIN, 200); analogWrite(BLUE_PIN, 0); 
     Serial.println("Safe for drinking");
   } 
-  else if (pH > 8.2 && pH <= 8.8) {
-    // Yellow for warning / mildly alkaline
+  else if (pH >= 7 && pH <= 8.0) {
+    analogWrite(RED_PIN, 0); analogWrite(GREEN_PIN, 255); analogWrite(BLUE_PIN, 0); 
+    Serial.println("Alkaline (Base Warning)");
+  } 
+  else if (pH >= 8.1 && pH <= 8.5) {
     analogWrite(RED_PIN, 255); analogWrite(GREEN_PIN, 200); analogWrite(BLUE_PIN, 0); 
     Serial.println("Alkaline (Base Warning)");
   } 
   else {
-    // Blue for highly alkaline
     analogWrite(RED_PIN, 0); analogWrite(GREEN_PIN, 0); analogWrite(BLUE_PIN, 255); 
     Serial.println("Alkaline (Base)");
   }
